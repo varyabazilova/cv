@@ -1,0 +1,345 @@
+%-------------------------
+% Entry-level Resume in LaTeX
+% Last Edits - July 2, 2021
+% Author : Jayesh Sanwal
+% Reach out to me on LinkedIn(/in/jsanwal), with any suggestions, ideas, etc.
+%------------------------
+
+%%-------------------------------------
+% Author Notes here -
+% 1) Change " Author+an = {N=highlight}" in "Publications.bib", where N is the number at which your name appears
+% 2) Use "\vspace" wisely, that would change spacing, and is currently being used as a hacky fix
+% 3) Do not delete the fonts in the left side
+% 4) Use the "Rich Text" feature on Overleaf - On the top panel next to source. Makes it much easier for starters on LaTeX to use this template
+% 5) Do NOT use periods at the end of bullet points, the sample text might have it
+%%-------------------------------------
+% Author Notes here -
+% 1) Shift to Class file, make changes here
+% 2) Use a fonts folder
+% 3) Incorporate Leadership & volunteering together
+% 4) Remove \vspace based 'hacky' fixes
+%%-------------------------------------
+% Add your notes/ideas here -
+% 1) 
+%%-------------------------------------
+
+\documentclass[a4,10pt]{article}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  STARTING HERE, DO NOT TOUCH ANYTHING 
+%%%%%%% --------------------------------------------------------------------------------------
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+ \usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=black}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+
+%%%% Set Margins
+\usepackage[margin=1cm, top=1cm]{geometry}
+
+%%%% Set Fonts
+\setmainfont[
+BoldFont=SourceSansPro-Semibold.otf, %SourceSansPro-Bold.otf
+ItalicFont=SourceSansPro-RegularIt.otf
+]{SourceSansPro-Regular.otf}
+\setsansfont{SourceSansPro-Semibold.otf}
+
+%%%% Set Page
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%% Set URL Style
+\urlstyle{same}
+
+%%%% Set Indentation
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%%%% Set Secondary Color
+\definecolor{UI_blue}{RGB}{32, 64, 151}
+
+%%%% Define New Commands
+\usepackage[style=nature]{biblatex}
+\addbibresource{Publications.bib}
+
+%%%% Bold Name in Publications
+\renewcommand*{\mkbibnamegiven}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+%%%% Set Sections formatting
+\titleformat{\section}{
+\color{UI_blue} \scshape \raggedright \large 
+}{}{0em}{}[\vspace{-10pt} \hrulefill \vspace{-6pt}]
+
+%%%% Set Subtext Formatting
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\newcommand{\subtextit}[1]{\vspace{0.15cm}
+\textit{ #1 \vspace{-0.2cm}} }
+
+%%%% Set Item Spacing
+\setlist[itemize]{align=parleft,left=0pt..1em}
+
+%%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep2pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+
+%%%% Define Skills Bold Formatting
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+%%%% Set Subsection formatting
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  END OF "DO NOT TOUCH" REGION
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%% --------------------------------------------------------------------------------------
+
+\begin{document}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  HEADER
+%%%%%%% --------------------------------------------------------------------------------------
+\begin{center}
+    \begin{minipage}[b]{0.24\textwidth}
+            \large Oslo, Norway \\
+            \large +47 968 00 563 \\
+            \large \href{mailto:varyabazilova@gmail.com}{varyabazilova@gmail.com} 
+            % \large \href{https://github.com/varyabazilova}{GitHub}
+    \end{minipage}% 
+    \begin{minipage}[b]{0.5\textwidth}
+            \centering
+            {\HUGE Varvara Bazilova} \\ %
+            \vspace{0.1cm}
+            % {\Large{ }} \\
+    \end{minipage}% 
+    \begin{minipage}[b]{0.24\textwidth}
+            \flushright \large  %Willing to Relocate
+            % {\href{https://www.linkedin.com/in/link/}{linkedin.com/in/yourlink} } \\
+            \href{https://github.com/varyabazilova}{GitHub}
+    \end{minipage}   
+    
+% \vspace{-0.15cm} 
+% {\color{UI_blue} \hrulefill}
+\end{center}
+% \vspace{-0.2cm}
+% -Soft-skill here- Engineer with \hskills{N+ years of experience} \& evidence of achievement in X, Y \& Z with -Another Soft-skill here-   
+% \vspace{-0.2cm}
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  AREAS OF EXPERTISE
+%%%%%%% --------------------------------------------------------------------------------------
+%\section{Areas of Expertise}
+%\begin{center}
+%    \begin{minipage}[t]{0.35\textwidth}
+%            \begin{zitemize}
+%                \item Keyword 1
+%                \item Keyword 2
+%            \end{zitemize}
+%    \end{minipage}%
+%    \begin{minipage}[t]{0.32\textwidth}
+%            \begin{zitemize}
+%                \item Keyword 3
+%                \item Keyword 4
+%            \end{zitemize}
+%    \end{minipage}%
+%    \begin{minipage}[t]{0.3\textwidth}
+%            \begin{zitemize}
+%                \item Keyword 4
+%                \item Keyword 5
+%            \end{zitemize}
+%    \end{minipage}
+%\end{center}
+%
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  EDUCATION
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Education }
+\subsection*{Master of Science, {\normalsize \normalfont University of Oslo, Department of Geoscience (hydrology and glaciology)} \hfill 2019 --- 2021} 
+\textbf{Thesis:} "Glacial lake changes from cloud processing of optical satellite images"; 60 ECTS
+\vspace{0.1cm}
+
+\subsection*{Master of Science, {\normalsize \normalfont Lomonosov Moscow State University, Faculty of Geography (hydrometeorology)} \hfill 2017 --- 2019} 
+\textbf{Graduation research project:} "Sediment budget of a proglacial river: case study of Tarfala River, Sweden", 6 ECTS)
+\vspace{0.1cm}
+
+\subsection*{Bachelor of Science, {\normalsize \normalfont Lomonosov Moscow State University, Faculty of Geography (hydrometeorology)} \hfill 2013 --- 2017} 
+% \vspace{0.1cm}
+\textbf{Graduation research project:} "Sediment yield of the glacierized catchment (case study of Djankuat river, Northern Caucuses)"\\
+\textbf{$3^{rd}$ year research project:} "Estimation of suspended sediment concentration in Selenga river delta using remote sensing multi-spectral data" 
+\vspace{0.2cm}
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Aditional Courses
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Aditional Courses }
+\subsection*{ACE Maritime University, {\normalsize \normalfont Swiss Polar Institute, floating university (school of oceanography as part of Antarctic Circumnavigation Expedition)} \hfill 2016} 
+\vspace{0.1cm}
+\subsection*{The University Centre in Svalbard (UNIS), {\normalsize \normalfont Arctic Infrastructures in a Changing Climate; Arctic Technology Department; 10 ECTS} \hfill 2018} 
+\vspace{0.2cm}
+
+
+
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  ACADEMIC PROJECTS
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Professional Appointments} %% (Or "Research Experience", select as appropriate)
+
+%%% ----- Best way to write items (Credit - FAANGPath)
+        % \item Achieved X\% growth for XYZ using A, B, and C skills.
+        % \item Led XYZ which led to X\% of improvement in ABC
+        % \item Developed XYZ that did A, B, and C using X, Y, and Z. 
+
+
+%%%%%%% ----------------------------------- Role 1 ----------------------------------- %%%%%%%
+\subsection*{Research assistant\\University of Oslo (UiO) \hfill July 2021 --- Dec 2021} 
+    \begin{zitemize}
+        \item Detection of global glacier surge activity using Sentinel-1 SAR data and Google Earth Engine 
+        % \item Aenean nec dui et felis mattis suscipit ut sed tortor. Sed nec viverra nulla. Mauris in dapibus quam.Aenean ut ligula sed orci interdum scelerisque. Cras eget odio mattis, accumsan arcu ac, interdum enim. Quisque et pharetra sem, in euismod leo 
+    \end{zitemize}
+
+
+%%%%%%% ----------------------------------- Role 2 ----------------------------------- %%%%%%%
+\subsection*{Research assistant \\ Norwegian Water Resources and Energy Directorate (NVE) \hfill Aug 2020 --- March 2021} 
+    \begin{zitemize}
+        \item Mapping wet snow using Sentinel-1 SAR data
+        \item Making glacier velocity maps in Svalbard (Copernicus Glacier Service project)
+    \end{zitemize}
+
+    
+%%%%%%% ----------------------------------- Role 4 ----------------------------------- %%%%%%%
+\subsection*{Research/teaching assistant \\University of Oslo (UiO) \hfill July 2020 --- Nov 2020} 
+    \begin{zitemize}
+        \item SAR Interferometry for DEM generation over glaciers 
+        \item Teaching assistant for Remote Sensing courses: supporting ArcGIS exercises and Google Earth Engine assignments
+    \end{zitemize}  
+    
+%%%%%%% ----------------------------------- Role 5 ----------------------------------- %%%%%%%
+\subsection*{Expert \\Ecosky LLC (Russia) \hfill Jan 2019 --- May 2019} 
+    \begin{zitemize}
+        \item GIS mapping for ecology and hydrology surveys
+        \item Processing of field survey data, data visualization
+    \end{zitemize}  
+    
+%%%%%%% ----------------------------------- Role 6 ----------------------------------- %%%%%%%
+\subsection*{Field assistant \\Tarfala Research Station (TRS), Stockholm University \hfill June 2018 --- July 2018} 
+    \begin{zitemize}
+        \item Field measurements for the TRS monitoring program (glacier mass balance, hydrology, meteorology, phenology)
+        \item Daily routine tasks at the station
+    \end{zitemize}  
+
+%%%%%%% ----------------------------------- Role 7 ----------------------------------- %%%%%%%
+\subsection*{Technician \\Lomonosov Moscow State University (Geography department) \hfill June 2016 --- Oct 2016} 
+    \begin{zitemize}
+        \item Fieldwork assistance: hydrological measurements (discharge, turbidity)
+        \item Laboratory grain size analysis of the suspended sediments (``Pollution of Selenga river: lake Baikal hydrological system: evaluation and forecast'' project)
+    \end{zitemize}
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  Teaching EXPERIENCE
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Teaching Experience}
+
+%%%%%%% ----------------------------------- Role 4 ----------------------------------- %%%%%%%
+\subsection*{Remote Sensing (GEO3515) \hfill Fall Semester 2020} 
+\subtext{Bachelor/Master level \hfill University of Oslo} 
+
+\subsection*{Advanced remote sensing and topographic analysis (GEO4520) \hfill Fall Semester 2020} 
+\subtext{Master/PhD. level \hfill University of Oslo} 
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  FIELD EXPERIENCE
+%%%%%%% --------------------------------------------------------------------------------------
+
+\section{Fieldwork Experience} %% (Or "Research Experience", select as appropriate)
+
+\subsection{Research field campaigns/projects participation:}
+%%%%%%% ----------------------------------- 1 ----------------------------------- %%%%%%%
+    \begin{zitemize}
+        \item Western Dvina (Daugava) river basin: \\"Management of Trans-boundary Rivers between Ukraine, Russia and the EU (ManTRA-Rivers)" \hfill \textbf{2018}
+        \item Tarfala Research Station, Sweden: \\"Fluvial sediment transport characteristics in periglacial and glacial environments of Northern Sweden (SedTraC)" project, within INTERACT research activities \hfill \textbf{2018}
+        \item{Selenga delta, Russia: \\ sediment yield formation research \hfill \textbf{2016}}
+        \item{Djankuat glacier, Russia: \\ mountain hydrology, suspended and bed-load sediment yield, glacier mass-balance measurements \hfill \textbf{2016, 2018}}
+        \item{Chon-Kyzyl-Suu river, Karabatkak glacier, Kyrgyzstan: \\mountain hydrology \hfill \textbf{2015}}
+    \end{zitemize}
+
+\subsection{Winter expeditions of Scientific Student Society (Moscow State University):}
+    \begin{zitemize}
+        \item Winter hydrological regime of Valdai lakes research, Russia \hfill \textbf{2016}
+        \item Complex study of lakes and the atmospheric boundary layer dynamics at the West coast of the White sea in winter, Russia \hfill \textbf{2015}
+        \item{Levels, discharge and water quality generation investigation in Amur river, Khabarovsk region, Russia \hfill \textbf{2014}}
+    \end{zitemize}
+
+
+
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  PUBLICATIONS
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Publications} 
+\renewcommand\refname{\vskip -1.5em}
+\nocite{*}
+\printbibliography[heading=none]
+\vspace{-0.4cm}
+
+
+
+
+%%%%%%% --------------------------------------------------------------------------------------
+%%%%%%%  SKILLS
+%%%%%%% --------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{tabular}{p{11em} p{1em} p{43em}}
+\hskills{Language} &  &  English (C1), German (A2), Norwegian (basic), Russian (native) \\
+\hskills{GIS and Hydrology} &  & ArcMap, QGIS, SNAP, Google Earth Engine, HBV  \\
+\hskills{Programming} &  & Python, R \\
+\end{tabular}
+\vspace{-0.2cm}
+
+
+%%%%%%% ---------------------------- END DOC HERE ---------------------------- %%%%%%% 
+\end{document}
